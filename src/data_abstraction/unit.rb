@@ -34,3 +34,8 @@ require_relative 'unit/volume_value'
 require_relative 'unit/flow_volume_value'
 
 require_relative 'unit/receive_signal_level_value'
+
+require_relative 'unit/currency_value'
+require_relative 'unit/fuel_consumption_value'
+require_relative 'unit/date_string'
+require_relative 'unit/zip_string'
