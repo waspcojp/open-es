@@ -3,8 +3,8 @@ module DataAbstraction::Unit
     STANDARD_UNIT = "L"
     UNITS = [
              [ "milli_meter_3", "mm^3", "uL", "ul" ],
-             [ "centi_meter_3", "cm^3", "mL", "ml" ],
-             [ "L", "L", "l" ],
+             [ "centi_meter_3", "cm^3", "mL", "ml", "cc" ],
+             [ "L", "L", "l", "Liter" ],
              [ "meter_3", "m^3", "kL", "KL", "kl" ],
              [ "kilo_meter_3", "Km^3", "km^3", "KM^3" ]
             ]

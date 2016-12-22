@@ -8,5 +8,8 @@ module DataAbstraction::SensorData
     def self.unit_class
       SimpleString
     end
+    def self.standard_unit
+      STANDARD_UNIT
+    end
   end
 end
