@@ -247,16 +247,9 @@ sensors = [
 
 sensors.each do | entry |
   print entry['data_class_name'], "\n"
-  entry['sensor_class_name'] = entry['data_class_name'].downcase
-  entry['sensor_name'] = "test_#{entry['data_class_name']}"
   entry['sensor_id'] = i
-  entry['data']['at'] = Time.now
-  entry['data']['location'] = {
-    'values' => [ 10, 20, 3],
-    'elevation' => 5
-  }
-  entry['data']['memo'] = "memo memo memo #{i}"
-  val = DataAbstraction::SensorData::Generic.unpack(entry)
+  val = DataAbstraction::SensorData::Generic.dummy(entry)
+=begin
   print "#{val.class} -----\n"
   print "#{val.class.unit_class} -----\n"
   print "#{val.class.unit_class.units} -----\n"
@@ -264,9 +257,13 @@ sensors.each do | entry |
   p val.class.units
   #p val
   p val.to_hash
+=end
   print val.to_hash.to_json, "\n"
-  val.to_requested!(val.class.units[0])
-  print "requested ", val.to_hash.to_json, "\n"
+  #val.to_requested!(val.class.units[0])
+  #print "requested ", val.to_hash.to_json, "\n"
   #print val.build_part, "\n"
   i += 1
 end
+
+val = DataAbstraction::SensorData::Accelerometer.dummy
+print val.to_hash.to_json, "\n"
