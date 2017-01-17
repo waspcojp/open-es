@@ -41,5 +41,25 @@ module DataAbstraction::SensorData
     def self.standard_unit
       STANDARD_UNIT
     end
+    def self.dummy
+      super({
+              'data_class_name' => self.name.split('::').last,
+              'data' => {
+                'value' => [{
+                              'SSID' => "aaa",
+                              'RSSI' => -30,
+                              'capabilities' => 'aaa,bbb,ccc'
+                            },{
+                              'SSID' => "bbb",
+                              'RSSI' => -40,
+                              'capabilities' => 'bbb,ccc,ddd'
+                            },{
+                              'SSID' => "ccc",
+                              'RSSI' => -20,
+                              'capabilities' => 'ccc,ddd,eee'
+                            }]
+              }
+            })
+    end
   end
 end

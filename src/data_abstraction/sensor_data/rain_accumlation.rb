@@ -18,5 +18,14 @@ module DataAbstraction::SensorData
       ret['data']['duration_unit'] = @duration.unit
       ret
     end
+    def self.dummy
+      super({
+              'data_class_name' => self.name.split('::').last,
+              'data' => {
+                'value' => 20,
+                'duration' => 3600
+              }
+            })
+    end
   end
 end
