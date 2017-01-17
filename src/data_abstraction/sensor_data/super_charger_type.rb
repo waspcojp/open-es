@@ -1,3 +1,4 @@
+# coding: utf-8
 module DataAbstraction::SensorData
   class SuperChargerType < Generic
     STANDARD_UNIT = nil
@@ -10,6 +11,14 @@ module DataAbstraction::SensorData
     end
     def self.standard_unit
       STANDARD_UNIT
+    end
+    def self.dummy
+      super({
+              'data_class_name' => self.name.split('::').last,
+              'data' => {
+                'value' => 'ターボ'
+              }
+            })
     end
   end
 end

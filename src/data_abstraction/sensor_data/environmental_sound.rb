@@ -21,5 +21,13 @@ module DataAbstraction::SensorData
     def self.standard_unit
       STANDARD_UNIT
     end
+    def self.dummy
+      super({
+              'data_class_name' => self.name.split('::').last,
+              'data' => {
+                'values' => [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+                'unit' => 'dB' }
+            })
+    end
   end
 end

@@ -34,5 +34,11 @@ module DataAbstraction::SensorData
     def self.standard_unit
       STANDARD_DATUM
     end
+    def self.dummy
+      super({
+              'data_class_name' => self.name.split('::').last,
+              'data' => {}
+            })
+    end
   end
 end
