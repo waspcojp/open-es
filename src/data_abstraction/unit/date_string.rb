@@ -2,9 +2,11 @@ module DataAbstraction::Unit
   class DateString < Generic
     STANDARD_UNIT = "YYYYMMDD"
     UNITS = [
-             [ "YYYYMMDD", "YYYYMMDD", "yyyymmdd" ],
+             [ "YYYYMMDD", "YYYYMMDD", "yyyymmdd", "YYYY/MM/DD" ],
              [ "YYYYMM", "YYYYMM", "yyyymm" ],
-             [ "YYYY", "YYYY", "yyyy" ]
+             [ "YYYY", "YYYY", "yyyy" ],
+             [ "MM", "MM", "mm" ],
+             [ "DD", "DD", "dd" ]
             ]
     @@unit_table = unit_table(UNITS)
 

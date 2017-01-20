@@ -10,5 +10,6 @@ sensor_data.delete(:Undef)
 sensor_data.each do | s |
   sensor_class = DataAbstraction::SensorData.const_get(s)
   val = sensor_class.dummy
-  print val.to_hash.to_json, "\n"
+  print sensor_class, "\n"
+  print val.to_hash.to_json, "\n\n"
 end
