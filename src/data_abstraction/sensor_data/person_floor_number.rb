@@ -1,6 +1,6 @@
 module DataAbstraction::SensorData
   class PersonFloorNumber < Generic
-    STANDARD_UNIT = "floor"
+    STANDARD_UNIT = ""
     def initialize(data, meta_values = {}, unit = STANDARD_UNIT)
       super(data, meta_values, unit)
       @value = CountValue.new(data['value'].to_i, @unit)
