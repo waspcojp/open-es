@@ -1,5 +1,5 @@
 module DataAbstraction::SensorData
-  class ChargedGasLatitude < Generic
+  class ChargeGS_Latitude < Generic
     STANDARD_UNIT = "degree"
     def initialize(data, meta_values = {}, unit = STANDARD_UNIT)
       super(data, meta_values, unit)
