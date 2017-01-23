@@ -1,6 +1,6 @@
 # coding: utf-8
 module DataAbstraction::SensorData
-  class ChargedGasLongitude < Generic
+  class ChargeGS_Longitude < Generic
     STANDARD_UNIT = "degree"
     def initialize(data, meta_values = {}, unit = STANDARD_UNIT)
       super(data, meta_values, unit)
