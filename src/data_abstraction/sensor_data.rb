@@ -109,3 +109,9 @@ require_relative 'sensor_data/chain_store_name_mm'
 require_relative 'sensor_data/purchased_year'
 require_relative 'sensor_data/purchased_month'
 require_relative 'sensor_data/purchased_day'
+
+# 2017.4.28
+require_relative 'sensor_data/person_weight'
+require_relative 'sensor_data/person_blood_pressure'
+require_relative 'sensor_data/person_pulse_count'
+require_relative 'sensor_data/person_temperature'

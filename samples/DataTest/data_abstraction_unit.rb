@@ -34,6 +34,7 @@ ConcentrationValue
 RateValue
 FlowVolumeValue
 ReceiveSignalLevelValue
+WeightValue
 }.each do | name |
   klass = DataAbstraction::Unit.const_get(name.to_sym)
   print "#{klass} ---\n"

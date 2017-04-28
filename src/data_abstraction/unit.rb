@@ -39,3 +39,5 @@ require_relative 'unit/currency_value'
 require_relative 'unit/fuel_consumption_value'
 require_relative 'unit/date_string'
 require_relative 'unit/zip_string'
+
+require_relative 'unit/weight_value'
