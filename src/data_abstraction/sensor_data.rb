@@ -115,3 +115,7 @@ require_relative 'sensor_data/person_weight'
 require_relative 'sensor_data/person_blood_pressure'
 require_relative 'sensor_data/person_pulse_count'
 require_relative 'sensor_data/person_temperature'
+
+# 2017.7.15
+require_relative 'sensor_data/electric_power'
+require_relative 'sensor_data/electric_power_availability'
