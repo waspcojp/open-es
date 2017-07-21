@@ -119,3 +119,6 @@ require_relative 'sensor_data/person_temperature'
 # 2017.7.15
 require_relative 'sensor_data/electric_power'
 require_relative 'sensor_data/electric_power_availability'
+
+# 2017.7.21
+require_relative 'sensor_data/electric_power_utilization'
