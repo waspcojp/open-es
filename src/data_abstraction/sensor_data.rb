@@ -126,3 +126,7 @@ require_relative 'sensor_data/electric_power_utilization'
 # 2017.7.22
 require_relative 'sensor_data/rain_precipitation'
 require_relative 'sensor_data/sunshine_ratio'
+
+# 2017.7.24
+require_relative 'sensor_data/sun_spot_number'
+require_relative 'sensor_data/sun_f10_7'
