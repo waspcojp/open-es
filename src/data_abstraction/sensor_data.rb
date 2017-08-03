@@ -133,3 +133,6 @@ require_relative 'sensor_data/sun_f10_7'
 
 # 2017.7.26
 require_relative 'sensor_data/air_visibility'
+
+# 2017.8.2
+require_relative 'sensor_data/currency_rate'
