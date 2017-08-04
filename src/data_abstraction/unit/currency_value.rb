@@ -19,21 +19,21 @@ module DataAbstraction::Unit
              [ "NZD", "NZD", "nzd" ],
              [ "NOK", "NOK", "nok" ],
              [ "PKR", "PKR", "pkr" ],
-             [ "HUF", "HUF", "huf" ],
+             [ "HUF", "HUF", "huf", "forint" ],
              [ "PHP", "PHP", "php" ],
-             [ "BRL", "BRL", "brl" ],
-             [ "PLN", "PLN", "pln" ],
-             [ "MYR", "MYR", "myr" ],
-             [ "MXN", "MXN", "mxn" ],
+             [ "BRL", "BRL", "brl", "real" ],
+             [ "PLN", "PLN", "pln", "zloty" ],
+             [ "MYR", "MYR", "myr", "RM", "rm", "Ringgit" ],
+             [ "MXN", "MXN", "mxn", "Mex$" ],
              [ "EUR", "EUR", "eur", "Euro", "euro" ],
-             [ "RUB", "RUB", "rub" ],
-             [ "CNY", "CNY", "cny" ],
-             [ "ZAR", "ZAR", "zar" ],
-             [ "TWD", "TWD", "twd" ],
+             [ "RUB", "RUB", "rub", "RUR", "rur", "rouble", "ruble" ],
+             [ "CNY", "CNY", "cny", "RMB", "rmb" ],
+             [ "ZAR", "ZAR", "zar", "Rand", "rand" ],
+             [ "TWD", "TWD", "twd", "NT$"  ],
              [ "JPY", "JPY", "jpy", "Yen", "yen" ],
              [ "USD", "USD", "usd", "Doller", "doller" ],
              [ "KRW", "KRW", "krw", "Won", "won" ],
-             [ "HKD", "HKD", "hkd" ]
+             [ "HKD", "HKD", "hkd", "HK$" ]
             ]
     @@unit_table = unit_table(UNITS)
 
