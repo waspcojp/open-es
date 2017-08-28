@@ -136,3 +136,11 @@ require_relative 'sensor_data/air_visibility'
 
 # 2017.8.2
 require_relative 'sensor_data/currency_rate'
+
+# 2017.8.28
+require_relative 'sensor_data/person_muscle_rate'
+require_relative 'sensor_data/person_basal_metabolism'
+require_relative 'sensor_data/person_bmi'
+require_relative 'sensor_data/person_body_fat_rate'
+require_relative 'sensor_data/person_body_water_rate'
+require_relative 'sensor_data/person_bone_weight'
