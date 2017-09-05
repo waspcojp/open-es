@@ -193,6 +193,9 @@ module DataAbstraction::SensorData
       if ( defined? @location )
         data['location'] = @location.to_hash
       end
+      if ( defined? @north )
+        data['north'] = @north
+      end
       if (( defined? @value ) &&
           ( @value ))
         if  ( @value.value.instance_of? Array )
