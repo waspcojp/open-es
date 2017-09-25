@@ -136,3 +136,6 @@ require_relative 'sensor_data/air_visibility'
 
 # 2017.8.2
 require_relative 'sensor_data/currency_rate'
+
+# 2017.9.25
+require_relative 'sensor_data/O2_concentration'
