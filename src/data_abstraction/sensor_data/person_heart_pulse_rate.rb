@@ -3,7 +3,7 @@ module DataAbstraction::SensorData
     STANDARD_UNIT = "bpm"
     def initialize(data, meta_values = {}, unit = STANDARD_UNIT)
       super(data, meta_values, unit)
-      @value = CycleValue.new(data['value'].to_i, @unit)
+      @value = CycleValue.new(data['value'].to_f, @unit)
     end
     def self.unit_class
       CycleValue

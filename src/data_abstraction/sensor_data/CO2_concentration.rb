@@ -3,7 +3,7 @@ module DataAbstraction::SensorData
     STANDARD_UNIT = "ppm"
     def initialize(data, meta_values = {}, unit = STANDARD_UNIT)
       super(data, meta_values, unit)
-      @value = ConcentrationValue.new(data['value'].to_i, @unit)
+      @value = ConcentrationValue.new(data['value'].to_f, @unit)
     end
     def self.unit_class
       ConcentrationValue
