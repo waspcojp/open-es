@@ -3,7 +3,7 @@ module DataAbstraction::SensorData
     STANDARD_UNIT = "Km"
     def initialize(data, meta_values = {}, unit = STANDARD_UNIT)
       super(data, meta_values, unit)
-      @value = DimensionValue.new(data['value'].to_i, @unit)
+      @value = DimensionValue.new(data['value'].to_f, @unit)
     end
     def self.unit_class
       DimensionValue
