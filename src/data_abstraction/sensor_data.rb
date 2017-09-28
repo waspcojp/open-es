@@ -147,3 +147,6 @@ require_relative 'sensor_data/person_bone_weight'
 
 # 2017.9.25
 require_relative 'sensor_data/O2_concentration'
+
+# 2017.9.27
+require_relative 'sensor_data/household_count'
