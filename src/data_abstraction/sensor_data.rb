@@ -150,3 +150,10 @@ require_relative 'sensor_data/O2_concentration'
 
 # 2017.9.27
 require_relative 'sensor_data/household_count'
+
+# 2017.10.25
+require_relative 'sensor_data/CPU_load'
+require_relative 'sensor_data/memory_ratio'
+require_relative 'sensor_data/disk_ratio'
+require_relative 'sensor_data/data_rate'
+require_relative 'sensor_data/bit_rate'
