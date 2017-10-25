@@ -30,11 +30,11 @@ module DataAbstraction::Unit
     def to_standard
       case @@unit_table[@unit]
       when "permil"
-        ConcentrationValue.new(@value / 10.0, STANDARD_UNIT)
+        RateValue.new(@value / 10.0, STANDARD_UNIT)
       when "ppm"
-        ConcentrationValue.new(@value / 10000.0, STANDARD_UNIT)
+        RateValue.new(@value / 10000.0, STANDARD_UNIT)
       when "ppb"
-        ConcentrationValue.new(@value / 10000000.0, STANDARD_UNIT)
+        RateValue.new(@value / 10000000.0, STANDARD_UNIT)
       else
         self
       end
@@ -44,11 +44,11 @@ module DataAbstraction::Unit
         standard = self.to_standard
         case @@unit_table[unit]
         when "permil"
-          ConcentrationValue.new(standard.value * 10.0, unit)
+          RateValue.new(standard.value * 10.0, unit)
         when "ppm"
-          ConcentrationValue.new(standard.value * 10000.0, unit)
+          RateValue.new(standard.value * 10000.0, unit)
         when "ppb"
-          ConcentrationValue.new(standard.value * 10000000.0, unit)
+          RateValue.new(standard.value * 10000000.0, unit)
         when "percent"
           standard
         else

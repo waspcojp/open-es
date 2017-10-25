@@ -41,3 +41,6 @@ require_relative 'unit/date_string'
 require_relative 'unit/zip_string'
 
 require_relative 'unit/weight_value'
+
+require_relative 'unit/bit_rate_value'
+require_relative 'unit/data_rate_value'
