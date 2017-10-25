@@ -2,6 +2,7 @@ module DataAbstraction::Unit
   class RateValue < Generic
     STANDARD_UNIT = "%"
     UNITS = [
+             [ "",        "" ],
              [ "percent", "%" ],
              [ "permil",  "permil" ],
              [ "ppm",     "ppm", "PPM" ],
@@ -29,6 +30,8 @@ module DataAbstraction::Unit
     end
     def to_standard
       case @@unit_table[@unit]
+      when ""
+        RateValue.new(@value * 100.0, STANDARD_UNIT)
       when "permil"
         RateValue.new(@value / 10.0, STANDARD_UNIT)
       when "ppm"
@@ -43,6 +46,8 @@ module DataAbstraction::Unit
       if ( unit != @unit )
         standard = self.to_standard
         case @@unit_table[unit]
+        when ""
+          RateValue.new(standard.value / 100.0, unit)
         when "permil"
           RateValue.new(standard.value * 10.0, unit)
         when "ppm"

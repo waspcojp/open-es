@@ -156,6 +156,7 @@ module DataAbstraction::SensorData
         end
         @unit = unit
       end
+      self
     end
     def to_s
       at = @at ? @at.utc : Time.now.utc
