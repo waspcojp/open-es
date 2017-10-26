@@ -47,13 +47,13 @@ module DataAbstraction::Unit
         standard = self.to_standard
         case @@unit_table[unit]
         when "milli_second"
-          DurationValue.new(@value * 1000.0, unit)
+          DurationValue.new(standard.value * 1000.0, unit)
         when "minute"
-          DurationValue.new(@value / 60.0, unit)
+          DurationValue.new(standard.value / 60.0, unit)
         when "hour"
-          DurationValue.new(@value / 3600.0, unit)
+          DurationValue.new(standard.value / 3600.0, unit)
         when "day"
-          DurationValue.new(@value / ( 3600.0 * 24.0 ), unit)
+          DurationValue.new(standard.value / ( 3600.0 * 24.0 ), unit)
         when "second"
           standard
         else

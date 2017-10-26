@@ -44,7 +44,7 @@ module DataAbstraction::Unit
         standard = self.to_standard
         case @@unit_table[unit]
         when "mm/h"
-          SpeedValue.new(@value * ( 3600.0 * 1000.0 ), unit)
+          SpeedValue.new(standard.value * ( 3600.0 * 1000.0 ), unit)
         when "cm/s"
           SpeedValue.new(standard.value * 100.0, unit)
         when "Km/s"

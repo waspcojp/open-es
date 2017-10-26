@@ -50,15 +50,15 @@ module DataAbstraction::Unit
         standard = self.to_standard
         case @@unit_table[unit]
         when "Kbps"
-          BitRateValue.new(@value / 1000.0, unit)
+          BitRateValue.new(standard.value / 1000.0, unit)
         when "Mbps"
-          BitRateValue.new(@value / 1000000.0, unit)
+          BitRateValue.new(standard.value / 1000000.0, unit)
         when "Gbps"
-          BitRateValue.new(@value / 1000000000.0, unit)
+          BitRateValue.new(standard.value / 1000000000.0, unit)
         when "Tbps"
-          BitRateValue.new(@value / 1000000000000.0, unit)
+          BitRateValue.new(standard.value / 1000000000000.0, unit)
         when "Pbps"
-          BitRateValue.new(@value / 1000000000000000.0, unit)
+          BitRateValue.new(standard.value / 1000000000000000.0, unit)
         when "bps"
           standard
         else
