@@ -120,12 +120,10 @@ module DataAbstraction::Unit
           EnergyValue.new(standard.value * 1000000000000.0, unit)
         when "j"
           standard
-
         when "cal"
           EnergyValue.new(standard.value / 4.184, unit)
         when "kcal"
           EnergyValue.new(standard.value / ( 4.184 * 1000.0 ), unit)
-
         when "wh"
           EnergyValue.new(standard.value * 3600.0, unit)
         when "Kwh"
@@ -142,7 +140,6 @@ module DataAbstraction::Unit
           EnergyValue.new(standard.value * ( 3600.0 / 1000000000.0 ), unit)
         when "pico_wh"
           EnergyValue.new(standard.value * ( 3600.0 / 1000000000000.0 ), unit)
-
         when "ev"
           EnergyValue.new(standard.value / 0.1602e-18, unit)
         when "Kev"
@@ -151,7 +148,6 @@ module DataAbstraction::Unit
           EnergyValue.new(standard.value / ( 1000000.0 * 0.1602e-18 ), unit)
         when "Gev"
           EnergyValue.new(standard.value / ( 1000000000.0 * 0.1602e-18 ), unit)
-
         else
           nil
         end

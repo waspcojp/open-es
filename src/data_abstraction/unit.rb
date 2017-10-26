@@ -44,3 +44,4 @@ require_relative 'unit/weight_value'
 
 require_relative 'unit/bit_rate_value'
 require_relative 'unit/data_rate_value'
+require_relative 'unit/data_size_value'
