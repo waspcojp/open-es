@@ -158,3 +158,6 @@ require_relative 'sensor_data/disk_ratio'
 require_relative 'sensor_data/data_rate'
 require_relative 'sensor_data/bit_rate'
 require_relative 'sensor_data/computer_duration'
+
+# 2017.10.26
+require_relative 'sensor_data/memory_size'

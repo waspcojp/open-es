@@ -50,15 +50,15 @@ module DataAbstraction::Unit
         standard = self.to_standard
         case @@unit_table[unit]
         when "KB"
-          DataSizeValue.new(standard.value / 1024.0, unit)
+          DataSizeValue.new(standard.value / 1024, unit)
         when "MB"
-          DataSizeValue.new(standard.value / 1048576.0, unit)
+          DataSizeValue.new(standard.value / 1048576, unit)
         when "GB"
-          DataSizeValue.new(standard.value / 1073741824.0, unit)
+          DataSizeValue.new(standard.value / 1073741824, unit)
         when "TB"
-          DataSizeValue.new(standard.value / 1099511627776.0, unit)
+          DataSizeValue.new(standard.value / 1099511627776, unit)
         when "PB"
-          DataSizeValue.new(standard.value / 1125899906842624.0, unit)
+          DataSizeValue.new(standard.value / 1125899906842624, unit)
         when "B"
           standard
         else
