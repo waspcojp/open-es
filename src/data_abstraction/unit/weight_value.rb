@@ -4,6 +4,7 @@ module DataAbstraction::Unit
     UNITS = [
              [ "micro_gram", "ug" ],
              [ "milli_gram", "mg" ],
+             [ "gram", "g", "g"],
              [ "kg", "Kg", "kg" ],
              [ "Mg", "Mg", "tonne" ],
              [ "Gg", "Gg" ],
