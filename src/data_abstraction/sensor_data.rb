@@ -161,3 +161,6 @@ require_relative 'sensor_data/computer_duration'
 
 # 2017.10.26
 require_relative 'sensor_data/memory_size'
+
+# 2017.11.20
+require_relative 'sensor_data/camera'
