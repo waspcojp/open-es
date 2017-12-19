@@ -164,3 +164,6 @@ require_relative 'sensor_data/memory_size'
 
 # 2017.11.20
 require_relative 'sensor_data/camera'
+
+# 2017.12.19
+require_relative 'sensor_data/DB_connection'
