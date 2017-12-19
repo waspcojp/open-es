@@ -251,7 +251,7 @@ module DataAbstraction::SensorData
       end
     end
     def self.dummy(entry)
-      entry['sensor_class_name'] = entry['data_class_name'].downcase
+      entry['sensor_class_name'] = entry['data_class_name'].downcase if entry['data_class_name']
       entry['sensor_name'] = "test_#{entry['data_class_name']}"
       entry['data']['at'] = Time.now
       entry['data']['location'] = {
