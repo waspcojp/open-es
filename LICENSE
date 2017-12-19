@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> bb79be6ba2c855ab2ae6097b0c2a58073e2a4c7e
                                  Apache License
                            Version 2.0, January 2004
                         http://www.apache.org/licenses/
@@ -186,7 +190,11 @@
       same "printed page" as the copyright notice for easier
       identification within third-party archives.
 
+<<<<<<< HEAD
    Copyright 2017 WASP Corp.
+=======
+   Copyright 2016 EverySense,Inc.
+>>>>>>> bb79be6ba2c855ab2ae6097b0c2a58073e2a4c7e
 
    Licensed under the Apache License, Version 2.0 (the "License");
    you may not use this file except in compliance with the License.
