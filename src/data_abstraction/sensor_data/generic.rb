@@ -9,7 +9,7 @@ module DataAbstraction::SensorData
       @accuracy = values['accuracy'].to_f if ( values['accuracy'] )
       @unit = values['unit'] ? values['unit'] : unit
       @memo = values['memo'] || meta_value['memo']
-      @meta = meta_value['meta']
+      @meta = values['meta'] || meta_value['meta']
       @sensor_id = meta_values['sensor_id'].to_i if ( meta_values['sensor_id'] )
       @device_uuid = meta_values['device_uuid'] if ( meta_values['device_uuid'] )
       @farm_uuid = meta_values['farm_uuid'] if ( meta_values['farm_uuid'] )
