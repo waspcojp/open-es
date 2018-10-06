@@ -183,6 +183,7 @@ module DataAbstraction::SensorData
       ret['meta'] = @meta if @meta
       
       ret['data'] = self.to_simple_hash
+      p ret
       ret
     end
     def to_simple_hash
