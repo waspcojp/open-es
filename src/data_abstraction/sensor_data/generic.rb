@@ -4,6 +4,8 @@ module DataAbstraction::SensorData
 
     include DataAbstraction::Unit
     def initialize(values, meta_values = {}, unit = nil)
+      p values
+      p meta_values
       @sensor_class_name = meta_values['sensor_class_name']  if ( meta_values['sensor_class_name'] )
       @sensor_name = meta_values['sensor_name']  if ( meta_values['sensor_name'] )
       @accuracy = values['accuracy'].to_f if ( values['accuracy'] )
