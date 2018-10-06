@@ -153,6 +153,9 @@ module DataAbstraction::SensorData
     def memo
       @memo
     end
+    def meta
+      @meta
+    end
     def to_requested!(unit = nil)
       unit = nil if ( unit == 'none' )
       if ( unit )
