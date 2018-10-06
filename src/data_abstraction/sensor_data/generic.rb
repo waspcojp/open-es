@@ -4,14 +4,22 @@ module DataAbstraction::SensorData
 
     include DataAbstraction::Unit
     def initialize(values, meta_values = {}, unit = nil)
-      p values
-      p meta_values
       @sensor_class_name = meta_values['sensor_class_name']  if ( meta_values['sensor_class_name'] )
       @sensor_name = meta_values['sensor_name']  if ( meta_values['sensor_name'] )
       @accuracy = values['accuracy'].to_f if ( values['accuracy'] )
       @unit = values['unit'] ? values['unit'] : unit
-      @memo = values['memo'] || meta_values['memo']
-      @meta = values['meta'] || meta_values['meta']
+      if values['memo']
+        @memo = values['memo']
+        values.delete('memo')
+      else
+        @memo = meta_values['memo']
+      end
+      if values['meta']
+        @meta = values['meta']
+        values.delete('meta')
+      else
+        @meta = meta_values['meta']
+      end
       @sensor_id = meta_values['sensor_id'].to_i if ( meta_values['sensor_id'] )
       @device_uuid = meta_values['device_uuid'] if ( meta_values['device_uuid'] )
       @farm_uuid = meta_values['farm_uuid'] if ( meta_values['farm_uuid'] )
@@ -183,7 +191,7 @@ module DataAbstraction::SensorData
       ret['meta'] = @meta if @meta
       
       ret['data'] = self.to_simple_hash
-      p ret
+      # p ret
       ret
     end
     def to_simple_hash
