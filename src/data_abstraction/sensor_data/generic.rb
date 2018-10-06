@@ -8,7 +8,8 @@ module DataAbstraction::SensorData
       @sensor_name = meta_values['sensor_name']  if ( meta_values['sensor_name'] )
       @accuracy = values['accuracy'].to_f if ( values['accuracy'] )
       @unit = values['unit'] ? values['unit'] : unit
-      @memo = values['memo'] if ( values['memo'] )
+      @memo = values['memo'] || meta_value['memo']
+      @meta = meta_value['meta']
       @sensor_id = meta_values['sensor_id'].to_i if ( meta_values['sensor_id'] )
       @device_uuid = meta_values['device_uuid'] if ( meta_values['device_uuid'] )
       @farm_uuid = meta_values['farm_uuid'] if ( meta_values['farm_uuid'] )
@@ -176,6 +177,8 @@ module DataAbstraction::SensorData
       ret['sensor_class_name'] = self.sensor_class_name if  ( self.sensor_class_name )
       ret['sensor_name'] = self.sensor_name if ( self.sensor_name )
       ret['data_class_name'] = self.data_class_name
+      ret['memo'] = @memo if @memo
+      ret['meta'] = @meta if @meta
       
       ret['data'] = self.to_simple_hash
       ret
