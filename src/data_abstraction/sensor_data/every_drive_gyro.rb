@@ -13,7 +13,7 @@ module DataAbstraction::SensorData
       end
     end
     def self.unit_class
-      DataAbstraction::Unit::LocationValue
+      AngularVelocityValue
     end
     def self.standard_unit
       STANDARD_UNIT
