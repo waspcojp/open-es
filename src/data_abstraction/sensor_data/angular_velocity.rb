@@ -8,9 +8,6 @@ module DataAbstraction::SensorData
       @values[1] = AngularVelocityValue.new(data['values'][1].to_f, @unit)
       @values[2] = AngularVelocityValue.new(data['values'][2].to_f, @unit)
     end
-    def build_part
-      "\"values\":[#{@values[0].value},#{@values[1].value},#{@values[2].value}],\"unit\":\"#{@unit}\""
-    end
     def self.unit_class
       AngularVelocityValue
     end
@@ -21,7 +18,7 @@ module DataAbstraction::SensorData
       super({
               'data_class_name' => self.name.split('::').last,
               'data' => {
-                'values' => [30, 40, 50],
+                'values' => [-0.3662109375,-0.152587890625,0.67138671875],
                 'unit' => 'deg/s' }
             })
     end

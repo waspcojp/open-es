@@ -167,3 +167,8 @@ require_relative 'sensor_data/camera'
 
 # 2017.12.19
 require_relative 'sensor_data/DB_connection'
+
+# 2018.10.16
+require_relative 'sensor_data/every_drive_GPS'
+require_relative 'sensor_data/every_drive_gyro'
+require_relative 'sensor_data/every_drive_mag'

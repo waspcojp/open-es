@@ -216,7 +216,7 @@ module DataAbstraction::SensorData
       if (( defined? @value ) &&
           ( @value ))
         if  ( @value.value.instance_of? Array )
-        data['values'] = Array.new
+          data['values'] = Array.new
           @value.value.each do | value |
             if  ( value )
               if ( value.instance_of? Hash )
@@ -238,17 +238,32 @@ module DataAbstraction::SensorData
         data['unit'] = @unit if @unit
       end
       if ( defined? @values )
-        data['values'] = Array.new
-        @values.each do | value |
-          if  ( value )
-            if ( value.instance_of? Hash )
-              ent = Hash.new
-              value.each do | key, v |
-                ent[key] = v.value
+        if ( @values.instance_of? Array )
+          data['values'] = Array.new
+          @values.each do | value |
+            if  ( value )
+              if ( value.instance_of? Hash )
+                ent = Hash.new
+                value.each do | key, v |
+                  ent[key] = v.value
+                end
+                data['values'] << ent
+              elsif ( value.instance_of? Array )
+                ent = Array.new
+                value.each do | v |
+                  ent << v.value
+                end
+                data['values'] << ent
+              else
+                data['values'] << value.value
               end
-              data['values'] << ent
-            else
-              data['values'] << value.value
+            end
+          end
+        elsif ( @values.instance_of? Hash )
+          data['values'] = Hash.new
+          @values.each do | key, value |
+            if  ( value )
+              data['values'][key] = value.value
             end
           end
         end
