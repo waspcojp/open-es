@@ -164,7 +164,21 @@ module DataAbstraction::SensorData
         elsif ( defined? @values )
           values = Array.new
           @values.each do | value |
-            values << value.to_requested(unit)
+            if ( value.instance_of? Array )
+              val = Array.new
+              value.each do | v |
+                val << v.to_requested(unit)
+              end
+              values << val
+            elsif ( value.instance_of? Hash )
+              val = Hash.new
+              value.each do | k, v |
+                val[k] = v.to_requested(unit)
+              end
+              values << val
+            else
+              values << value.to_requested(unit)
+            end
           end
           @values = values
         end
