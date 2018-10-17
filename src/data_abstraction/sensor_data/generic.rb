@@ -162,25 +162,47 @@ module DataAbstraction::SensorData
         if  ( defined? @value )
           @value = @value.to_requested(unit)
         elsif ( defined? @values )
-          values = Array.new
-          @values.each do | value |
-            if ( value.instance_of? Array )
-              val = Array.new
-              value.each do | v |
-                val << v.to_requested(unit)
+          if ( @values.instance_of? Array )
+            values = Array.new
+            @values.each do | value |
+              if ( value.instance_of? Array )
+                val = Array.new
+                value.each do | v |
+                  val << v.to_requested(unit)
+                end
+                values << val
+              elsif ( value.instance_of? Hash )
+                val = Hash.new
+                value.each do | k, v |
+                  val[k] = v.to_requested(unit)
+                end
+                values << val
+              else
+                values << value.to_requested(unit)
               end
-              values << val
-            elsif ( value.instance_of? Hash )
-              val = Hash.new
-              value.each do | k, v |
-                val[k] = v.to_requested(unit)
-              end
-              values << val
-            else
-              values << value.to_requested(unit)
             end
+            @values = values
+          elsif ( @values.instance_of? Hash )
+            values = Hash.new
+            @values.each do | key, value |
+              if ( value.instance_of? Array )
+                val = Array.new
+                value.each do | v |
+                  val << v.to_requested(unit)
+                end
+                values[key] = val
+              elsif ( value.instance_of? Hash )
+                val = Hash.new
+                value.each do | k, v |
+                  val[k] = v.to_requested(unit)
+                end
+                values[key] << val
+              else
+                values[key] = value.to_requested(unit)
+              end
+            end
+            @values = values
           end
-          @values = values
         end
         @unit = unit
       end
