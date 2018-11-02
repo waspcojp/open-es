@@ -6,7 +6,7 @@ module DataAbstraction::Unit
              [ "cm/s^2", "cm/s^2" ],
              [ "mm/s^2", "mm/s^2" ],
              [ "gal",    "Gal" ],
-             [ "g",      "G" ],
+             [ "g",      "g", "G" ],
              [ "mg",     "mG" ]
             ]
     @@unit_table = unit_table(UNITS)

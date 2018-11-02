@@ -172,3 +172,6 @@ require_relative 'sensor_data/DB_connection'
 require_relative 'sensor_data/every_drive_GPS'
 require_relative 'sensor_data/every_drive_gyro'
 require_relative 'sensor_data/every_drive_mag'
+
+# 2018.11.02
+require_relative 'sensor_data/every_drive_accel'
